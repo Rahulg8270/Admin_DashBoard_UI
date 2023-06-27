@@ -1,0 +1,154 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    background-color: #f2e4d4;
+    
+}
+
+/* search bar */
+.search-container {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+}
+
+/* user title  */
+.userTitle-container {
+    margin: 2rem 1rem;
+    display: grid;
+    grid-template-columns: 20px repeat(4, 1fr);
+    grid-gap: 1rem;
+    border-bottom: 1px solid gray;
+}
+
+.user-title {
+    padding: 0;
+    color: #1e1d30;
+}
+
+/* user entry */
+.userEntry-container {
+    margin: 2rem 1rem;
+    border-bottom: 1px solid gray;
+}
+
+.userEntry-values {
+    display: grid;
+    grid-template-columns: 20px repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 2rem;
+}
+
+/* input box styling */
+.input-readOnly {
+    border: none;
+    text-align: center;
+    /* padding: 1rem; */
+}
+
+
+/* buttons styling */
+
+/* delete selected button */
+.deleteSelected-btn {
+    justify-self: flex-start;
+    border-radius: 5px;
+    background-color: rgb(250, 86, 86);
+    color: aliceblue;
+    padding: 0.5rem;
+    border: none;
+}
+
+.deleteSelected-btn:hover {
+    background-color: rgb(247, 141, 141);
+    cursor: pointer;
+}
+
+/* entry delete button */
+.userEntryDelete-btn {
+    border: none;
+    color: rgb(250, 86, 86);
+    font-size: large;
+}
+
+/* entry edit button */
+.userEntryEdit-btn {
+    border: none;
+    color: gray;
+    font-size: large;
+}
+
+.userEntryEdit-btn:hover,
+.userEntryDelete-btn:hover {
+    cursor: pointer;
+}
+
+/* styling the save button and cancel button*/
+.userEntrySave-btn {
+    border: none;
+    color: rgb(109, 250, 109);
+    font-size: larger;
+}
+
+.userEntrySave-btn {
+    border: none;
+    color: rgb(243, 77, 77);
+    font-size: larger;
+}
+
+.userEntryCancelEditing-btn {
+    border: none;
+    color: rgb(255, 63, 63);
+    font-size: larger;
+}
+
+.userEntrySave-btn:hover::after {
+    content: "Save current Entry";
+    color: green;
+    cursor: pointer;
+}
+
+.userEntryCancelEditing-btn:hover::after {
+    content: "Cancel Editing";
+    color: red;
+    cursor: pointer;
+}
+
+
+/* footer area */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+
+/* media Queries */
+@media (max-width: 600px) {
+    /*  */
+    /* userTitle  */
+    .userTitle-container {
+        grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+        grid-gap: 10px;
+    }
+
+    .user-title {
+        font-size: 14px;
+        text-align: center;
+    }
+    /* userValues */
+    .userEntry-values {
+        grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+        grid-gap: 10px;
+    }
+
+    .input-edit {
+        font-size: 14px;
+        text-align: center;
+    }
+}

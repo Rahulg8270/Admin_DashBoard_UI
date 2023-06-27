@@ -1,0 +1,32 @@
+
+.pagination{
+    position: fixed;
+    bottom: 20px;
+    left: 40%;
+}
+.page-buttons{
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 0.5rem;
+}
+.page-buttons:disabled{
+    background-color: aqua;
+    color: whitesmoke;
+}
+.page-buttons:disabled:hover{
+    cursor: not-allowed;
+}
+.page-buttons:hover{
+    cursor: pointer;
+}
+.page-buttons{
+    background-color: rgb(166, 84, 243);
+    color: whitesmoke;
+}
+@media (max-width: 600px){
+    .pagination{
+        position: fixed;
+        bottom: 0;
+    }
+}
